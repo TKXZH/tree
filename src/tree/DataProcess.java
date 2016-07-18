@@ -123,6 +123,12 @@ fid+ "';");
 		}
 	}
 	
+	/**
+	 * 
+	 * @param fid
+	 * @return	指定fid的size大小,若为目录，返回0
+	 * @throws SQLException
+	 */
 	public static int getSize(int fid) throws SQLException {
 		int size = 0;
 		ResultSet res = statement.executeQuery("select size from file where fid = '" +
